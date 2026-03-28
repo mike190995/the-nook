@@ -321,7 +321,7 @@ $(function() {
     submitBtn.find('.btn-caption').text("Sending...");
 
     // Google Apps Script URL
-    var scriptURL = "https://script.google.com/a/macros/thenook.shop/s/AKfycbzTeRtxzO0t-2qn7HpZKsWS-bMq2vqCXGaSHgrXHbvUG4FxJHRoifALA5j4rpDY5KaUjQ/exec";
+    var scriptURL = "https://script.google.com/macros/s/AKfycbzTeRtxzO0t-2qn7HpZKsWS-bMq2vqCXGaSHgrXHbvUG4FxJHRoifALA5j4rpDY5KaUjQ/exec";
 
     if (scriptURL === "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE") {
       alert("Please provide the Google Apps Script URL to enable live data capture. \n\nCaptured Data (Mock):\n" + JSON.stringify(formData, null, 2));
