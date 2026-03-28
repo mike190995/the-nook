@@ -334,10 +334,10 @@ $(function() {
 
     fetch(scriptURL, {
       method: 'POST',
-      mode: 'no-cors', // Google Apps Script requires no-cors if not handling preflight
+      mode: 'no-cors', // Google Apps Script requires no-cors for simple requests without preflight
       cache: 'no-cache',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'text/plain;charset=utf-8'
       },
       body: JSON.stringify(formData)
     })
