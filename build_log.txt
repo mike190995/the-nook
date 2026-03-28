@@ -1,0 +1,195 @@
+﻿---- REMOTE BUILD OUTPUT -----
+starting build "a6670b03-08f3-46cf-bd6b-be41b9f2f5f0"
+
+FETCHSOURCE
+Fetching storage object: gs://senmizu_cloudbuild/source/1774551199.276967-4bb77993c50e423bb2540484b2db94ca.tgz#1774551296839493
+Copying gs://senmizu_cloudbuild/source/1774551199.276967-4bb77993c50e423bb2540484b2db94ca.tgz#1774551296839493...
+/ [0 files][    0.0 B/ 58.0 MiB]                                                
+-
+- [1 files][ 58.0 MiB/ 58.0 MiB]                                                
+
+Operation completed over 1 objects/58.0 MiB.                                     
+BUILD
+Already have image (with digest): gcr.io/cloud-builders/gcb-internal
+Sending build context to Docker daemon  105.5MB
+
+
+Step 1/4 : FROM nginx:alpine
+alpine: Pulling from library/nginx
+589002ba0eae: Already exists
+8892f80f46a0: Pulling fs layer
+91d1c9c22f2c: Pulling fs layer
+cf1159c696ee: Pulling fs layer
+3f4ad4352d4f: Pulling fs layer
+c2bd5ab17727: Pulling fs layer
+4d9d41f3822d: Pulling fs layer
+3370263bc02a: Pulling fs layer
+3370263bc02a: Waiting
+cf1159c696ee: Verifying Checksum
+cf1159c696ee: Download complete
+3f4ad4352d4f: Download complete
+4d9d41f3822d: Verifying Checksum
+4d9d41f3822d: Download complete
+8892f80f46a0: Verifying Checksum
+8892f80f46a0: Download complete
+c2bd5ab17727: Verifying Checksum
+c2bd5ab17727: Download complete
+91d1c9c22f2c: Verifying Checksum
+91d1c9c22f2c: Download complete
+8892f80f46a0: Pull complete
+91d1c9c22f2c: Pull complete
+3370263bc02a: Verifying Checksum
+3370263bc02a: Download complete
+cf1159c696ee: Pull complete
+3f4ad4352d4f: Pull complete
+c2bd5ab17727: Pull complete
+4d9d41f3822d: Pull complete
+3370263bc02a: Pull complete
+Digest: sha256:e7257f1ef28ba17cf7c248cb8ccf6f0c6e0228ab9c315c152f9c203cd34cf6d1
+Status: Downloaded newer image for nginx:alpine
+ ---> d5030d429039
+Step 2/4 : COPY nginx.conf /etc/nginx/conf.d/default.conf
+ ---> 139f0d1ecd0e
+Step 3/4 : COPY . /usr/share/nginx/html
+ ---> 04d4a58b9e7a
+Step 4/4 : EXPOSE 8080
+ ---> Running in 051a672de616
+Removing intermediate container 051a672de616
+ ---> 574febfb51a3
+Successfully built 574febfb51a3
+Successfully tagged gcr.io/the-nook-469917/the-nook-shop-service:latest
+PUSH
+Pushing gcr.io/the-nook-469917/the-nook-shop-service
+The push refers to repository [gcr.io/the-nook-469917/the-nook-shop-service]
+ff435bb6c5c1: Preparing
+024aba949849: Preparing
+6d895dca2a49: Preparing
+e8abceee8fd8: Preparing
+1eb65b5fb2a1: Preparing
+cff742fa7408: Preparing
+9ffd725bd2f3: Preparing
+8ca391b8823c: Preparing
+27fc2bd29afd: Preparing
+989e799e6349: Preparing
+denied: Permission 'artifactregistry.repositories.uploadArtifacts' denied on resource (or it may not exist).
+Pushing gcr.io/the-nook-469917/the-nook-shop-service
+The push refers to repository [gcr.io/the-nook-469917/the-nook-shop-service]
+ff435bb6c5c1: Preparing
+024aba949849: Preparing
+6d895dca2a49: Preparing
+e8abceee8fd8: Preparing
+1eb65b5fb2a1: Preparing
+cff742fa7408: Preparing
+9ffd725bd2f3: Preparing
+8ca391b8823c: Preparing
+27fc2bd29afd: Preparing
+989e799e6349: Preparing
+denied: Permission 'artifactregistry.repositories.uploadArtifacts' denied on resource (or it may not exist).
+Pushing gcr.io/the-nook-469917/the-nook-shop-service
+The push refers to repository [gcr.io/the-nook-469917/the-nook-shop-service]
+ff435bb6c5c1: Preparing
+024aba949849: Preparing
+6d895dca2a49: Preparing
+e8abceee8fd8: Preparing
+1eb65b5fb2a1: Preparing
+cff742fa7408: Preparing
+9ffd725bd2f3: Preparing
+8ca391b8823c: Preparing
+27fc2bd29afd: Preparing
+989e799e6349: Preparing
+denied: Permission 'artifactregistry.repositories.uploadArtifacts' denied on resource (or it may not exist).
+Pushing gcr.io/the-nook-469917/the-nook-shop-service
+The push refers to repository [gcr.io/the-nook-469917/the-nook-shop-service]
+ff435bb6c5c1: Preparing
+024aba949849: Preparing
+6d895dca2a49: Preparing
+e8abceee8fd8: Preparing
+1eb65b5fb2a1: Preparing
+cff742fa7408: Preparing
+9ffd725bd2f3: Preparing
+8ca391b8823c: Preparing
+27fc2bd29afd: Preparing
+989e799e6349: Preparing
+denied: Permission 'artifactregistry.repositories.uploadArtifacts' denied on resource (or it may not exist).
+Pushing gcr.io/the-nook-469917/the-nook-shop-service
+The push refers to repository [gcr.io/the-nook-469917/the-nook-shop-service]
+ff435bb6c5c1: Preparing
+024aba949849: Preparing
+6d895dca2a49: Preparing
+e8abceee8fd8: Preparing
+1eb65b5fb2a1: Preparing
+cff742fa7408: Preparing
+9ffd725bd2f3: Preparing
+8ca391b8823c: Preparing
+27fc2bd29afd: Preparing
+989e799e6349: Preparing
+denied: Permission 'artifactregistry.repositories.uploadArtifacts' denied on resource (or it may not exist).
+Pushing gcr.io/the-nook-469917/the-nook-shop-service
+The push refers to repository [gcr.io/the-nook-469917/the-nook-shop-service]
+ff435bb6c5c1: Preparing
+024aba949849: Preparing
+6d895dca2a49: Preparing
+e8abceee8fd8: Preparing
+1eb65b5fb2a1: Preparing
+cff742fa7408: Preparing
+9ffd725bd2f3: Preparing
+8ca391b8823c: Preparing
+27fc2bd29afd: Preparing
+989e799e6349: Preparing
+denied: Permission 'artifactregistry.repositories.uploadArtifacts' denied on resource (or it may not exist).
+Pushing gcr.io/the-nook-469917/the-nook-shop-service
+The push refers to repository [gcr.io/the-nook-469917/the-nook-shop-service]
+ff435bb6c5c1: Preparing
+024aba949849: Preparing
+6d895dca2a49: Preparing
+e8abceee8fd8: Preparing
+1eb65b5fb2a1: Preparing
+cff742fa7408: Preparing
+9ffd725bd2f3: Preparing
+8ca391b8823c: Preparing
+27fc2bd29afd: Preparing
+989e799e6349: Preparing
+denied: Permission 'artifactregistry.repositories.uploadArtifacts' denied on resource (or it may not exist).
+Pushing gcr.io/the-nook-469917/the-nook-shop-service
+The push refers to repository [gcr.io/the-nook-469917/the-nook-shop-service]
+ff435bb6c5c1: Preparing
+024aba949849: Preparing
+6d895dca2a49: Preparing
+e8abceee8fd8: Preparing
+1eb65b5fb2a1: Preparing
+cff742fa7408: Preparing
+9ffd725bd2f3: Preparing
+8ca391b8823c: Preparing
+27fc2bd29afd: Preparing
+989e799e6349: Preparing
+denied: Permission 'artifactregistry.repositories.uploadArtifacts' denied on resource (or it may not exist).
+Pushing gcr.io/the-nook-469917/the-nook-shop-service
+The push refers to repository [gcr.io/the-nook-469917/the-nook-shop-service]
+ff435bb6c5c1: Preparing
+024aba949849: Preparing
+6d895dca2a49: Preparing
+e8abceee8fd8: Preparing
+1eb65b5fb2a1: Preparing
+cff742fa7408: Preparing
+9ffd725bd2f3: Preparing
+8ca391b8823c: Preparing
+27fc2bd29afd: Preparing
+989e799e6349: Preparing
+denied: Permission 'artifactregistry.repositories.uploadArtifacts' denied on resource (or it may not exist).
+Pushing gcr.io/the-nook-469917/the-nook-shop-service
+The push refers to repository [gcr.io/the-nook-469917/the-nook-shop-service]
+ff435bb6c5c1: Preparing
+024aba949849: Preparing
+6d895dca2a49: Preparing
+e8abceee8fd8: Preparing
+1eb65b5fb2a1: Preparing
+cff742fa7408: Preparing
+9ffd725bd2f3: Preparing
+8ca391b8823c: Preparing
+27fc2bd29afd: Preparing
+989e799e6349: Preparing
+denied: Permission 'artifactregistry.repositories.uploadArtifacts' denied on resource (or it may not exist).
+ERROR: failed to push because we ran out of retries.
+ERROR
+ERROR: error pushing image "gcr.io/the-nook-469917/the-nook-shop-service": retry budget exhausted (10 attempts): step exited with non-zero status: 1
+------------------------------

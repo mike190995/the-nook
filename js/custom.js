@@ -89,6 +89,18 @@ $(window).on("load", function() {
     // Swiper Slider End
     // --------------------------------------------- //
 
+    // --------------------------------------------- //
+    // Animation On Load Reveal
+    // --------------------------------------------- //
+    var orderBtnReveal = anime({
+      targets: '.animate-on-load',
+      translateY: [30, 0],
+      opacity: [0, 1],
+      easing: 'easeOutQuart',
+      duration: 1000,
+      delay: 500
+    });
+
   },1000);
 
   setTimeout(function(){
@@ -227,6 +239,124 @@ $(function() {
 	});
   // --------------------------------------------- //
   // Let's Talk Form End
+  // --------------------------------------------- //
+
+  // --------------------------------------------- //
+  // Order Popup Logic Start
+  // --------------------------------------------- //
+  var orderTrigger = $("#order-trigger"),
+      orderPopup = $(".order-popup"),
+      orderClose = $("#order-close"),
+      productCard = $(".product-card"),
+      backBtn = $(".back-to-products"),
+      selectionView = $(".product-selection-view"),
+      formView = $(".order-form-view");
+
+  // Open popup
+  orderTrigger.on("click", function(e) {
+    e.preventDefault();
+    // Default to selection view
+    selectionView.removeClass("is-hidden");
+    formView.addClass("is-hidden");
+    
+    orderPopup.addClass("is-visible");
+    setTimeout(function() {
+      $(".order-popup .popup__content").addClass("is-visible");
+    }, 200);
+    setTimeout(function() {
+      orderClose.addClass("is-scaled-up");
+    }, 1000);
+  });
+
+  // Close popup
+  orderClose.on("click", function(e) {
+    e.preventDefault();
+    orderClose.removeClass("is-scaled-up");
+    $(".order-popup .popup__content").removeClass("is-visible");
+    setTimeout(function() {
+      orderPopup.removeClass("is-visible");
+    }, 300);
+  });
+
+  // Product Selection
+  productCard.on("click", function() {
+    var product = $(this).data("product");
+    var price = $(this).data("price");
+    
+    // Set form fields
+    $("#form-product-name").val(product);
+    $("#form-product-price").val(price);
+    
+    // Set display text
+    $("#selected-product-display").text(product);
+    $("#selected-price-display").text("$" + price.toLocaleString());
+    
+    // Switch views
+    selectionView.addClass("is-hidden");
+    formView.removeClass("is-hidden");
+  });
+
+  // Back to Selection
+  backBtn.on("click", function(e) {
+    e.preventDefault();
+    formView.addClass("is-hidden");
+    selectionView.removeClass("is-hidden");
+  });
+
+  // Form Submission to Google Sheets
+  $("#order-form").submit(function(e) {
+    e.preventDefault();
+    var th = $(this);
+    var submitBtn = th.find('button[type="submit"]');
+    var originalBtnText = submitBtn.find('.btn-caption').text();
+    
+    // Prepare data
+    var formData = {};
+    th.serializeArray().forEach(function(item) {
+      formData[item.name] = item.value;
+    });
+
+    // Disable button during submission
+    submitBtn.prop("disabled", true);
+    submitBtn.find('.btn-caption').text("Sending...");
+
+    // Google Apps Script URL
+    var scriptURL = "https://script.google.com/a/macros/thenook.shop/s/AKfycbzTeRtxzO0t-2qn7HpZKsWS-bMq2vqCXGaSHgrXHbvUG4FxJHRoifALA5j4rpDY5KaUjQ/exec";
+
+    if (scriptURL === "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE") {
+      alert("Please provide the Google Apps Script URL to enable live data capture. \n\nCaptured Data (Mock):\n" + JSON.stringify(formData, null, 2));
+      submitBtn.prop("disabled", false);
+      submitBtn.find('.btn-caption').text(originalBtnText);
+      orderClose.click();
+      th.trigger("reset");
+      return;
+    }
+
+    fetch(scriptURL, {
+      method: 'POST',
+      mode: 'no-cors', // Google Apps Script requires no-cors if not handling preflight
+      cache: 'no-cache',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+    .then(function() {
+      alert("Thank you for your order! We will contact you soon.");
+      orderClose.click();
+      th.trigger("reset");
+    })
+    .catch(function(error) {
+      console.error('Error!', error.message);
+      alert("Something went wrong. Please try again or contact us directly.");
+    })
+    .finally(function() {
+      submitBtn.prop("disabled", false);
+      submitBtn.find('.btn-caption').text(originalBtnText);
+    });
+  });
+  // --------------------------------------------- //
+  // Order Popup Logic End
   // --------------------------------------------- //
 
 });

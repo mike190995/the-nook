@@ -33,6 +33,9 @@
     <!-- Facebook Metadata End -->
 
     <!-- Template Styles Start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/loaders/loader.css">
     <link rel="stylesheet" type="text/css" href="css/plugins.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -164,8 +167,10 @@
               <div class="intro__content transparent fullscreen fullheight-mobile">
 
                 <!-- Headline Start -->
-                <div id="headline" class="headline headline-centered">
-                  <h1 class="large no-color">Your Personal<br>Sanctuary</h1>
+                <div id="headline" class="headline headline-bottom">
+                  <div id="order-trigger-holder" class="animate-on-load">
+                    <a href="#0" id="order-trigger" class="btn btn-light-large">Order Now</a>
+                  </div>
                 </div>
                 <!-- Headline End -->
 
@@ -206,7 +211,7 @@
                 <!-- Section Title Start -->
                 <div class="content-block">
                   <div class="section-title">
-                    <h2>Welcome to<br>The <span>Nook</span></h2>
+                    <h2>Welcome to<br><span>The Nook</span></h2>
                     <p class="section-title__text">The Nook was born from a simple idea: that everyone deserves a personal sanctuary. A corner of the world that is unequivocally theirs, designed for comfort, reflection, and peace. We obsess over the details—from sustainable materials to ergonomic design—to create furniture that doesn't just fill a space, but enhances your life within it.</p>
                   </div>
                 </div>
@@ -231,7 +236,7 @@
               <div class="media__container fullheight">
 
                 <!-- About Image Start -->
-                <div class="innermedia__image about-image"></div>
+                <div class="innermedia__image about-image" style="background-image: url('img/stylish-living-room-interior-with-comfortable-sofa-2026-01-20-17-31-34-utc.jpg');"></div>
                 <!-- About Image End -->
 
               </div>
@@ -700,6 +705,127 @@
       </div>
     </div>
     <!-- Let's Talk Popup End -->
+    
+    <!-- Order Now Popup Start -->
+    <div class="popup order-popup">
+      <div class="popup__container">
+        
+        <!-- Popup Controls Start -->
+        <div class="popup__controls">
+          <a href="#0" id="order-close" class="popup-close"></a>
+        </div>
+        <!-- Popup Controls End -->
+
+        <!-- Popup Content Start -->
+        <div class="popup__content">
+          
+          <!-- Step 1: Product Selection -->
+          <div class="product-selection-view">
+            <div class="content-block">
+              <div class="section-title">
+                <h2>Select Your <br><span>Product</span></h2>
+                <p class="section-title__text">Choose an item to proceed with your order.</p>
+              </div>
+              <div class="row pt-4 product-grid">
+                <!-- Product 1 -->
+                <div class="col-12 col-md-4 product-card sold-out-card" data-product="Single Boho Egg Basket" data-price="1999">
+                  <div class="product-card__image" style="background-image: url('img/backgrounds/Single Basket_White.jpg');">
+                    <div class="sold-out-tag">SOLD OUT</div>
+                  </div>
+                  <div class="product-card__info">
+                    <h4>Single Boho Egg Basket</h4>
+                    <p class="card-price">$1,999</p>
+                  </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-12 col-md-4 product-card sold-out-card" data-product="Double Boho Egg Basket" data-price="2499">
+                  <div class="product-card__image" style="background-image: url('img/backgrounds/Double Boho Egg Basket.png');">
+                    <div class="sold-out-tag">SOLD OUT</div>
+                  </div>
+                  <div class="product-card__info">
+                    <h4>Double Boho Egg Basket</h4>
+                    <p class="card-price">$2,499</p>
+                  </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-12 col-md-4 product-card" data-product="Patio Set" data-price="1000">
+                  <div class="product-card__image" style="background-image: url('img/backgrounds/Patio Set.jpg');">
+                    <div class="card-sale-tag">SALE</div>
+                  </div>
+                  <div class="product-card__info">
+                    <h4>Patio Set</h4>
+                    <p class="card-price"><span class="old-price">$2,399</span> $1,000</p>
+                    <span class="restock-tag">Restocking Soon</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Order Form -->
+          <div class="order-form-view is-hidden">
+            <div class="content-block">
+              <div class="section-title">
+                <a href="#0" class="back-to-products"><i class="fa-solid fa-arrow-left"></i> Back to Products</a>
+                <h2>Complete Your <br><span>Order</span></h2>
+                <div class="selected-product-summary">
+                  <p>You are ordering: <strong id="selected-product-display"></strong></p>
+                  <p>Total: <strong id="selected-price-display"></strong></p>
+                </div>
+              </div>
+
+              <!-- Order Form Start -->
+              <form id="order-form" class="form order-form">
+                <!-- Hidden fields for product selection -->
+                <input type="hidden" id="form-product-name" name="product_name">
+                <input type="hidden" id="form-product-price" name="price">
+                
+                <div class="container-fluid p-0">
+                  <div class="row gx-4">
+                    <div class="col-12 col-md-6">
+                      <input type="text" name="name" placeholder="Your Name*" required>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <input type="text" name="contact" placeholder="Contact Number*" required>
+                    </div>
+                    <div class="col-12">
+                      <input type="text" name="location" placeholder="Location*" required>
+                    </div>
+                    <div class="col-12">
+                      <div class="payment-method-selector">
+                        <h6 class="payment-title">Payment Method</h6>
+                        <div class="payment-options">
+                          <label class="payment-option">
+                            <input type="radio" name="payment_method" value="Bank Transfer" checked>
+                            <span class="radio-custom"></span>
+                            <span class="option-text">Bank Transfer</span>
+                          </label>
+                          <label class="payment-option">
+                            <input type="radio" name="payment_method" value="Cash on Delivery">
+                            <span class="radio-custom"></span>
+                            <span class="option-text">Cash on Delivery</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-dark">
+                        <span class="btn-caption">Order Now</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <!-- Order Form End -->
+            </div>
+          </div>
+
+        </div>
+        <!-- Popup Content End -->
+
+      </div>
+    </div>
+    <!-- Order Now Popup End -->
 
     <!-- Root element of PhotoSwipe. Must have class pswp. -->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">

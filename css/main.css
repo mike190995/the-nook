@@ -130,6 +130,8 @@
   font-weight: 400;
   src: url("../fonts/BohoBreeze/BohoBreeze.ttf") format("truetype");
 }
+
+/* Tertiary Font: "Open Sans", sans-serif (imported in index.html) */
 /* ------------------------------------------------*/
 /* Fonts End */
 /* ------------------------------------------------*/
@@ -391,6 +393,7 @@ h2 span {
 
 .section-title__text {
   margin-top: 3rem;
+  font-family: "Open Sans", sans-serif;
 }
 
 h3 {
@@ -434,6 +437,7 @@ p span {
 }
 p.small-text {
   font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
 }
 
 a {
@@ -1144,14 +1148,6 @@ form .inputs-description {
   .headline.mobile-centered {
     top: auto;
     bottom: auto;
-    -webkit-transform: translateY(0);
-       -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
-  }
-  .headline.headline-bottom {
-    top: auto;
-    bottom: 8rem;
     -webkit-transform: translateY(0);
        -moz-transform: translateY(0);
         -ms-transform: translateY(0);
@@ -2383,6 +2379,7 @@ form .inputs-description {
 }
 .contact-item p {
   margin-top: 0.4rem;
+  font-family: "Open Sans", sans-serif;
 }
 .contact-item p a {
   -webkit-transition: all 0.5s ease-in-out;
@@ -2400,6 +2397,7 @@ form .inputs-description {
   display: block;
   position: relative;
   font-size: 1.4rem;
+  font-family: "Open Sans", sans-serif;
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -2727,3 +2725,289 @@ form .inputs-description {
 .headline.headline-centered h1 span {
   color: #ffffff;
 }
+/* Homepage Animation & Button */
+.animate-on-load {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+     -moz-transform: translateY(30px);
+      -ms-transform: translateY(30px);
+          transform: translateY(30px);
+}
+
+.btn-light-large {
+  padding: 1.5rem 4rem;
+  font: normal 500 2.8rem/1.2 "Palm Tango", sans-serif;
+  color: #ffffff;
+  border: 4px solid #ffffff;
+  background-color: transparent;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-light-large:hover {
+  background-color: #ffffff;
+  color: #232323;
+  -webkit-transform: scale(1.05);
+     -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Order Popup Custom Styles */
+.order-product-image {
+  background-image: url("../img/backgrounds/Single Basket_White.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 400px;
+}
+
+.sale-tag {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: #ff3b3b;
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  font: normal 600 1.4rem/1 "Open Sans", sans-serif;
+  border-radius: 2px;
+  -webkit-transform: rotate(15deg);
+     -moz-transform: rotate(15deg);
+      -ms-transform: rotate(15deg);
+          transform: rotate(15deg);
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.price-container {
+  margin-top: 1.5rem;
+}
+
+.original-price {
+  font: normal 400 1.8rem/1 "Open Sans", sans-serif;
+  color: #888;
+  text-decoration: line-through;
+  margin-right: 1.5rem;
+}
+
+.sale-price {
+  font: normal 700 2.8rem/1 "Open Sans", sans-serif;
+  color: #ff3b3b;
+}
+
+.inputs-description {
+  display: block;
+  font: normal 400 1.2rem/1.2 "Open Sans", sans-serif;
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+.headline.headline-bottom {
+  position: absolute;
+  top: auto !important;
+  bottom: 10% !important;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  -webkit-transform: translateY(0) !important;
+     -moz-transform: translateY(0) !important;
+      -ms-transform: translateY(0) !important;
+          transform: translateY(0) !important;
+  z-index: 100 !important;
+}
+/* ------------------------------------------------*/
+/* Multi-Product Order Popup Styles Start */
+/* ------------------------------------------------*/
+.is-hidden {
+  display: none !important;
+}
+
+.product-grid {
+  margin-top: 2rem;
+}
+
+.product-card {
+  cursor: pointer;
+  margin-bottom: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.sold-out-card {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.product-card__image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-sale-tag, .sold-out-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.card-sale-tag {
+  background-color: #ff3b30;
+}
+
+.sold-out-tag {
+  background-color: #1a1a1a;
+}
+
+.restock-tag {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid #ff9800;
+  color: #ff9800;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+}
+
+.product-card__info h4 {
+  font-family: "Palm Tango", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.card-price {
+  font-size: 1.8rem;
+  color: #ffcc00;
+}
+
+.old-price {
+  text-decoration: line-through;
+  font-size: 1.4rem;
+  opacity: 0.6;
+  margin-right: 0.5rem;
+}
+
+.selected-product-summary {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #064422;
+}
+
+.selected-product-summary p {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.back-to-products {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #666;
+  font-size: 1.4rem;
+  transition: color 0.3s;
+}
+
+.back-to-products:hover {
+  color: #1a1a1a;
+}
+
+.payment-method-selector {
+  margin: 2rem 0;
+}
+
+.payment-title {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #1a1a1a;
+}
+
+.payment-options {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.payment-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.payment-option:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.payment-option input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-custom {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #1a1a1a;
+  border-radius: 50%;
+  margin-right: 1rem;
+  display: inline-block;
+  position: relative;
+}
+
+.payment-option input:checked ~ .radio-custom::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+}
+
+.option-text {
+  font-size: 1.4rem;
+  color: #1a1a1a;
+}
+
+@media only screen and (max-width: 767px) {
+  .product-card__image {
+    aspect-ratio: 16 / 9;
+  }
+}
+/* ------------------------------------------------*/
+/* Multi-Product Order Popup Styles End */
+/* ------------------------------------------------*/
