@@ -52,15 +52,23 @@
 }
 
 .swiper-image-fullscreen-1 {
-  background-image: url("../img/backgrounds/Patio Set_limers.png");
+  background-image: url("../img/new bg/image.jpeg");
 }
 
 .swiper-image-fullscreen-2 {
-  background-image: url("../img/backgrounds/Single\ basket\ black\ decor.png");
+  background-image: url("../img/new bg/image (1).jpeg");
 }
 
 .swiper-image-fullscreen-3 {
-  background-image: url("../img/backgrounds/Double\ basket\ couple\ 1.png");
+  background-image: url("../img/new bg/image (2).jpeg");
+}
+
+.swiper-image-fullscreen-4 {
+  background-image: url("../img/new bg/image (1).png");
+}
+
+.swiper-image-fullscreen-5 {
+  background-image: url("../img/backgrounds/New Patio Set Furnished.jpeg");
 }
 
 .media-image-1 {
@@ -850,7 +858,7 @@ form input, form textarea {
   padding: 0;
   background-color: transparent;
   padding: 1.2rem;
-  font: normal 400 1.6rem/1.7 "Palm Tango", sans-serif;
+  font: normal 400 1.6rem/1.7 "Open Sans", sans-serif;
   -webkit-transition: border-bottom 0.6s;
   -o-transition: border-bottom 0.6s;
   -moz-transition: border-bottom 0.6s;
@@ -2750,14 +2758,15 @@ form .inputs-description {
 }
 
 .btn-light-large:hover {
-  background-color: #ffffff;
-  color: #232323;
+  background-color: #ffcc00;
+  border-color: #ffcc00;
+  color: #064422;
   -webkit-transform: scale(1.05);
      -moz-transform: scale(1.05);
       -ms-transform: scale(1.05);
           transform: scale(1.05);
-  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Order Popup Custom Styles */
@@ -2836,17 +2845,38 @@ form .inputs-description {
 
 .product-card {
   cursor: pointer;
-  margin-bottom: 3rem;
-  transition: transform 0.3s ease;
+}
+/* ------------------------------------------------*/
+/* Multi-Product Order Popup Styles Start */
+/* ------------------------------------------------*/
+.order-popup .popup__content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.product-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid rgba(6, 68, 34, 0.12);
+  padding: 1.2rem;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(6, 68, 34, 0.12);
+  border-color: rgba(203, 161, 51, 0.6);
 }
 
-.sold-out-card {
-  pointer-events: none;
-  opacity: 0.6;
+.product-card.is-selected {
+  border: 2px solid #CBA133;
+  background: rgba(203, 161, 51, 0.04);
+  box-shadow: 0 8px 25px rgba(203, 161, 51, 0.18);
 }
 
 .product-card__image {
@@ -2856,158 +2886,613 @@ form .inputs-description {
   background-size: cover;
   background-position: center;
   border-radius: 8px;
-  margin-bottom: 1.5rem;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.card-sale-tag, .sold-out-tag {
+.selected-badge {
   position: absolute;
   top: 10px;
-  right: 10px;
-  color: #fff;
-  padding: 0.4rem 1rem;
+  left: 10px;
+  background-color: #064422;
+  color: #CBA133;
+  padding: 0.3rem 0.8rem;
   font-size: 1.2rem;
   font-weight: 700;
   border-radius: 4px;
-  z-index: 2;
+  z-index: 3;
+  border: 1px solid #CBA133;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card-sale-tag {
-  background-color: #ff3b30;
-}
-
-.sold-out-tag {
-  background-color: #1a1a1a;
-}
-
-.restock-tag {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.2rem 0.6rem;
-  border: 1px solid #ff9800;
-  color: #ff9800;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #CBA133;
+  color: #064422;
+  padding: 0.3rem 0.8rem;
   font-size: 1.1rem;
+  font-weight: 800;
   border-radius: 4px;
-  font-weight: 600;
-  font-family: "Open Sans", sans-serif;
+  z-index: 2;
+  letter-spacing: 0.5px;
 }
 
-.product-card__info h4 {
+.product-card__info {
+  padding-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.product-card__info .card-title {
   font-family: "Palm Tango", sans-serif;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+  color: #064422 !important;
+  font-weight: 600;
 }
 
 .card-price {
-  font-size: 1.8rem;
-  color: #ffcc00;
+  font-family: "Palm Tango", sans-serif;
+  font-size: 1.7rem;
+  color: #CBA133 !important;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
 }
 
 .old-price {
   text-decoration: line-through;
-  font-size: 1.4rem;
-  opacity: 0.6;
+  font-size: 1.3rem;
+  color: #888888;
   margin-right: 0.5rem;
 }
 
-.selected-product-summary {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
-  border-left: 4px solid #064422;
+/* Quantity Control */
+.card-qty-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4f7f4;
+  border-radius: 6px;
+  padding: 0.3rem;
+  border: 1px solid rgba(6, 68, 34, 0.15);
 }
 
-.selected-product-summary p {
-  margin: 0;
+.btn-qty-minus,
+.btn-qty-plus {
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  border: 1px solid rgba(6, 68, 34, 0.2);
+  color: #064422;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1.2rem;
+}
+
+.btn-qty-minus:hover,
+.btn-qty-plus:hover {
+  background: #064422;
+  color: #CBA133;
+  border-color: #064422;
+}
+
+.card-qty-num {
+  font-family: "Palm Tango", sans-serif;
   font-size: 1.6rem;
+  font-weight: 700;
+  color: #064422;
+  min-width: 25px;
+  text-align: center;
+}
+
+/* Selection Bottom Bar */
+.selection-action-bar {
+  position: sticky;
+  bottom: 0;
+  margin-top: 3rem;
+  padding: 1.5rem 2rem;
+  background: #064422;
+  color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 6px 25px rgba(6, 68, 34, 0.35);
+  z-index: 10;
+}
+
+.selection-summary-text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.summary-divider {
+  color: #CBA133;
+}
+
+.summary-total-gold {
+  color: #CBA133;
+  font-weight: 700;
+  font-size: 1.8rem;
+  font-family: "Palm Tango", sans-serif;
+}
+
+.selection-action-bar .btn {
+  background-color: #CBA133;
+  color: #064422;
+  border: 1px solid #CBA133;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.selection-action-bar .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.selection-action-bar .btn:not(:disabled):hover {
+  background-color: #ffffff;
+  color: #064422;
+  border-color: #ffffff;
+}
+
+/* Step 2 Order Summary Breakdown */
+.order-breakdown-card {
+  background: #f8faf8;
+  border: 1px solid rgba(6, 68, 34, 0.15);
+  border-radius: 8px;
+  padding: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.breakdown-header h5 {
+  font-family: "Palm Tango", sans-serif;
+  font-size: 1.8rem;
+  color: #064422;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(6, 68, 34, 0.1);
+  padding-bottom: 0.8rem;
+}
+
+.order-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.order-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  color: #333333;
+}
+
+.order-item-row .item-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.order-item-row .item-badge {
+  background: #064422;
+  color: #CBA133;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.order-item-row .item-total {
+  font-weight: 600;
+  color: #064422;
+  font-family: "Palm Tango", sans-serif;
+  font-size: 1.5rem;
+}
+
+.breakdown-footer {
+  margin-top: 1.4rem;
+  padding-top: 1.2rem;
+  border-top: 2px dashed rgba(6, 68, 34, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #064422;
+  font-weight: 600;
+}
+
+.grand-total-amount {
+  font-family: "Palm Tango", sans-serif;
+  font-size: 2.2rem;
+  color: #CBA133;
+}
+
+.input-label {
+  display: block;
+  font-family: "Palm Tango", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #064422;
+  margin-bottom: 0.6rem;
+  margin-top: 1.5rem;
+  letter-spacing: 0.5px;
 }
 
 .back-to-products {
-  display: inline-block;
-  margin-bottom: 2rem;
-  color: #666;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  color: #064422;
   font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: underline;
   transition: color 0.3s;
 }
 
 .back-to-products:hover {
-  color: #1a1a1a;
+  color: #CBA133;
 }
 
 .payment-method-selector {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 .payment-title {
   display: block;
   margin-bottom: 1rem;
-  font-size: 1.8rem;
-  color: #1a1a1a;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #064422;
 }
 
 .payment-options {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .payment-option {
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
-  padding: 1rem 1.5rem;
-  background: rgba(0, 0, 0, 0.02);
-  border-radius: 6px;
-  transition: background 0.3s;
+  padding: 1rem 2.2rem;
+  background-color: #fbfcff;
+  border: 1px solid rgba(6, 68, 34, 0.25);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  min-width: 150px;
+  flex: 1 1 calc(50% - 0.75rem);
+  text-align: center;
 }
 
 .payment-option:hover {
-  background: rgba(0, 0, 0, 0.05);
+  border-color: #064422;
+  background-color: rgba(6, 68, 34, 0.03);
 }
 
 .payment-option input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
+  position: absolute !important;
+  opacity: 0 !important;
+  cursor: pointer !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .radio-custom {
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  border: 2px solid #1a1a1a;
-  border-radius: 50%;
-  margin-right: 1rem;
-  display: inline-block;
-  position: relative;
-}
-
-.payment-option input:checked ~ .radio-custom::after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 8px;
-  height: 8px;
-  background-color: #1a1a1a;
-  border-radius: 50%;
+  display: none !important;
 }
 
 .option-text {
+  font-family: "Palm Tango", sans-serif;
   font-size: 1.4rem;
-  color: #1a1a1a;
+  color: #064422;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+/* Checked/Selected State */
+.payment-option.is-selected {
+  background-color: #064422 !important;
+  border-color: #064422 !important;
+}
+
+.payment-option.is-selected .option-text {
+  color: #ffffff !important;
 }
 
 @media only screen and (max-width: 767px) {
-  .product-card__image {
-    aspect-ratio: 16 / 9;
+  .selection-action-bar {
+    flex-direction: column;
+    gap: 1.2rem;
+    text-align: center;
+  }
+  .selection-action-bar .btn {
+    width: 100%;
   }
 }
+.order-form input[type="text"],
+.order-form input[type="tel"],
+.order-form textarea {
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 1.5rem !important;
+  font-weight: 400 !important;
+  color: #1a1a1a !important;
+  border: 1px solid rgba(6, 68, 34, 0.2) !important;
+  background-color: #fbfcff !important;
+  border-radius: 6px !important;
+  padding: 1.1rem 1.4rem !important;
+  margin-bottom: 2.2rem !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+  transition: all 0.3s ease;
+}
+
+.order-form input[type="text"]:focus,
+.order-form input[type="tel"]:focus,
+.order-form textarea:focus {
+  border-color: #064422 !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(6, 68, 34, 0.08), inset 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+}
+
+.order-form textarea {
+  height: 100px !important;
+}
+
+/* Autofill typography override */
+.order-form input[type="text"]:-webkit-autofill,
+.order-form input[type="text"]:-webkit-autofill:hover, 
+.order-form input[type="text"]:-webkit-autofill:focus,
+.order-form input[type="tel"]:-webkit-autofill,
+.order-form input[type="tel"]:-webkit-autofill:hover, 
+.order-form input[type="tel"]:-webkit-autofill:focus,
+.order-form textarea:-webkit-autofill,
+.order-form textarea:-webkit-autofill:hover,
+.order-form textarea:-webkit-autofill:focus {
+  font-family: "Open Sans", sans-serif !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+  font-size: 1.5rem !important;
+}
+
+/* Order Form Submit Button Style override */
+.order-form .btn[type="submit"] {
+  background-color: #064422 !important;
+  color: #CBA133 !important;
+  border: 1px solid #064422 !important;
+  padding: 1.2rem 2rem !important;
+  font-family: "Palm Tango", sans-serif !important;
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  border-radius: 6px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease !important;
+  display: block;
+  width: 100% !important;
+  box-shadow: 0 4px 12px rgba(6, 68, 34, 0.15) !important;
+}
+
+.order-form .btn[type="submit"]::after {
+  display: none !important;
+  content: none !important;
+}
+
+.order-form .btn[type="submit"]:hover {
+  background-color: #CBA133 !important;
+  color: #064422 !important;
+  border-color: #CBA133 !important;
+  box-shadow: 0 6px 18px rgba(203, 161, 51, 0.3) !important;
+}
+
+/* Responsive Popup & Payment Options overrides */
+@media only screen and (max-width: 767px) {
+  .popup__container {
+    padding: 2rem 15px !important;
+  }
+  .popup__content .content-block {
+    padding: 3rem 2rem !important;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .payment-options {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .payment-option {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
 /* ------------------------------------------------*/
 /* Multi-Product Order Popup Styles End */
 /* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* 2x2 Grid Showcase Swiper Carousel Styles */
+/* ------------------------------------------------*/
+.products-grid-swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #064422;
+}
+
+.products-grid-swiper .swiper-wrapper {
+  height: 100%;
+}
+
+.products-grid-swiper .swiper-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.my-gallery.fullheight {
+  height: 100%;
+}
+
+.my-gallery__description h4 small {
+  color: #CBA133 !important;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.sale-tag {
+  display: inline-block;
+  background: #CBA133;
+  color: #064422 !important;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 2px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.btn-grid-order {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.7rem 1.6rem;
+  font: normal 600 1.2rem/1.2 "Palm Tango", sans-serif;
+  color: #064422;
+  background-color: #CBA133;
+  border: 1px solid #CBA133;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0;
+  transform: translate3d(0px, 20px, 0px) scale3d(1.1, 1.1, 1.1);
+  transition: opacity 0.5s 0.3s ease-in-out, transform 0.5s 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.btn-grid-order:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #064422;
+}
+
+.no-touch .my-gallery__item:hover .btn-grid-order {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);
+}
+
+/* On Touch/Mobile Devices, ensure buttons and descriptions are visible */
+@media only screen and (max-width: 1199px) {
+  .products-grid-swiper {
+    height: auto;
+  }
+  .products-grid-swiper .swiper-slide {
+    height: auto;
+  }
+  .my-gallery__item {
+    height: 280px;
+  }
+  .my-gallery__description {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+  .btn-grid-order {
+    opacity: 1;
+    transform: none;
+    padding: 0.5rem 1.2rem;
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
+  }
+}
+
+/* Custom Navigation & Pagination Controls */
+.products-grid-controls {
+  position: absolute;
+  bottom: 2.2rem;
+  right: 2.5rem;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: rgba(6, 68, 34, 0.92);
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  border: 1px solid rgba(203, 161, 51, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.products-grid-prev,
+.products-grid-next {
+  color: #CBA133;
+  cursor: pointer;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.products-grid-prev:hover,
+.products-grid-next:hover {
+  color: #ffffff;
+  background: rgba(203, 161, 51, 0.3);
+}
+
+.products-grid-pagination {
+  position: relative !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+}
+
+.products-grid-pagination .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  margin: 0 !important;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.products-grid-pagination .swiper-pagination-bullet-active {
+  background: #CBA133;
+  width: 22px;
+  border-radius: 4px;
+}
+
+
+
+

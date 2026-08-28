@@ -38,7 +38,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/loaders/loader.css">
     <link rel="stylesheet" type="text/css" href="css/plugins.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css?v=2.2">
     <!-- Template Styles End -->
 
     <!-- Custom Browser Color Start -->
@@ -148,6 +148,11 @@
                   <div class="swiper-slide swiper-image-fullscreen-2"></div>
                   <!-- slide single -->
                   <div class="swiper-slide swiper-image-fullscreen-3"></div>
+                  <!-- slide single -->
+                  <div class="swiper-slide swiper-image-fullscreen-4"></div>
+                  <!-- slide single -->
+                  <div class="swiper-slide swiper-image-fullscreen-5"></div>
+
                 </div>
               </div>
               <!-- Navigation buttons -->
@@ -366,59 +371,162 @@
 
                 <!-- Works Gallery Start -->
                 <div class="container-fluid p-0 works__gallery fullheight">
-                  <div class="row my-gallery g-0 fullheight" itemscope itemtype="http://schema.org/ImageGallery">
-                    <!-- gallery single item -->
-                    <figure class="col-12 col-sm-6 my-gallery__item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                      <a href="img/backgrounds/Single Basket_White.jpg" data-image="img/backgrounds/Single Basket_White.jpg" class="my-gallery__link" itemprop="contentUrl" data-size="1000x1400">
-                        <img src="img/backgrounds/Single Basket_White.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Image description" />
-                      </a>
-                      <figcaption class="my-gallery__description" itemprop="caption description">
-                        <h4 class="light">
-                          <small>$1999</small>
-                          <span>Single Boho Egg Basket</span>
-                        </h4>
-                        <p>Available in 4 different colors: white, brown, grey & black.</p>
-                      </figcaption>
-                    </figure>
-                    <!-- gallery single item -->
-                    <figure class="col-12 col-sm-6 my-gallery__item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                      <a href="img/backgrounds/Double Boho Egg Basket.png" data-image="img/backgrounds/Double Boho Egg Basket.png" class="my-gallery__link" itemprop="contentUrl" data-size="1000x1400">
-                        <img src="img/backgrounds/Double Boho Egg Basket.png" class="my-gallery__image" itemprop="thumbnail" alt="Image description" />
-                      </a>
-                      <figcaption class="my-gallery__description" itemprop="caption description">
-                        <h4 class="light">
-                          <small>$2499</small>
-                          <span>Double Boho Egg Basket</span>
-                        </h4>
-                        <p>Perfect for sharing a cozy moment, this spacious basket brings bohemian flair to any corner.</p>
-                      </figcaption>
-                    </figure>
-                    <!-- gallery single item -->
-                    <figure class="col-12 col-sm-6 my-gallery__item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                      <a href="img/backgrounds/Patio Set.jpg" data-image="img/backgrounds/Patio Set.jpg" class="my-gallery__link" itemprop="contentUrl" data-size="1000x1400">
-                        <img src="img/backgrounds/Patio Set.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Image description" />
-                      </a>
-                      <figcaption class="my-gallery__description" itemprop="caption description">
-                        <h4 class="light">
-                          <small>$2399</small>
-                          <span>Patio Set</span>
-                        </h4>
-                        <p>Dine in style with our elegant and durable patio set, perfect for outdoor gatherings.</p>
-                      </figcaption>
-                    </figure>
-                    <!-- gallery single item -->
-                    <figure class="col-12 col-sm-6 my-gallery__item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" style="display: none;">
-                      <a href="https://dummyimage.com/1000x1400/636363/8e8e8e" data-image="https://dummyimage.com/1000x1400/636363/8e8e8e" class="my-gallery__link" itemprop="contentUrl" data-size="1000x1400">
-                        <img src="https://dummyimage.com/1000x1400/636363/8e8e8e" class="my-gallery__image" itemprop="thumbnail" alt="Image description" />
-                      </a>
-                      <figcaption class="my-gallery__description" itemprop="caption description">
-                        <h4 class="light">
-                          <small>Apparel</small>
-                          <span>Sweatshirt Print</span>
-                        </h4>
-                        <p>Mauris porttitor lobortis ligula, quis molestie lorem scelerisque eu. Morbi aliquam enim odio, a mollis ipsum tristique eu.</p>
-                      </figcaption>
-                    </figure>
+                  
+                  <!-- 2x2 Grid Swiper Carousel -->
+                  <div class="swiper products-grid-swiper fullheight">
+                    <div class="swiper-wrapper">
+                      
+                      <!-- Slide 1: 4 Products Grid -->
+                      <div class="swiper-slide">
+                        <div class="row my-gallery g-0 fullheight" itemscope itemtype="http://schema.org/ImageGallery">
+                          
+                          <!-- Item 1: Luxury Accent Chair -->
+                          <figure class="col-6 my-gallery__item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="img/backgrounds/Accent Chair White.png" data-image="img/backgrounds/Accent Chair White.png" class="my-gallery__link" itemprop="contentUrl" data-size="1122x1402">
+                              <div class="picture" style="background-image: url('img/backgrounds/Accent Chair White.png');"></div>
+                              <img src="img/backgrounds/Accent Chair White.png" class="my-gallery__image" itemprop="thumbnail" alt="Luxury Accent Chair" />
+                            </a>
+                            <figcaption class="my-gallery__description" itemprop="caption description">
+                              <h4 class="light">
+                                <small>$899</small>
+                                <span>Luxury Accent Chair</span>
+                              </h4>
+                              <p>Available in 9 vibrant and neutral colors.</p>
+                              <button type="button" class="btn-grid-order" data-product="Luxury Accent Chair" data-price="899">Order Now</button>
+                            </figcaption>
+                          </figure>
+
+                          <!-- Item 2: Premium Lounge Chair -->
+                          <figure class="col-6 my-gallery__item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="img/backgrounds/Lounge Chair Green.jpeg" data-image="img/backgrounds/Lounge Chair Green.jpeg" class="my-gallery__link" itemprop="contentUrl" data-size="853x1138">
+                              <div class="picture" style="background-image: url('img/backgrounds/Lounge Chair Green.jpeg');"></div>
+                              <img src="img/backgrounds/Lounge Chair Green.jpeg" class="my-gallery__image" itemprop="thumbnail" alt="Premium Lounge Chair" />
+                            </a>
+                            <figcaption class="my-gallery__description" itemprop="caption description">
+                              <h4 class="light">
+                                <small>$1,299</small>
+                                <span>Premium Lounge Chair</span>
+                              </h4>
+                              <p>Sleek, modern comfort. Available in green and khaki.</p>
+                              <button type="button" class="btn-grid-order" data-product="Premium Lounge Chair" data-price="1299">Order Now</button>
+                            </figcaption>
+                          </figure>
+
+                          <!-- Item 3: Elegant Large Couch -->
+                          <figure class="col-6 my-gallery__item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="img/backgrounds/Large Couch Light Grey.jpeg" data-image="img/backgrounds/Large Couch Light Grey.jpeg" class="my-gallery__link" itemprop="contentUrl" data-size="853x1138">
+                              <div class="picture" style="background-image: url('img/backgrounds/Large Couch Light Grey.jpeg');"></div>
+                              <img src="img/backgrounds/Large Couch Light Grey.jpeg" class="my-gallery__image" itemprop="thumbnail" alt="Elegant Large Couch" />
+                            </a>
+                            <figcaption class="my-gallery__description" itemprop="caption description">
+                              <h4 class="light">
+                                <small>$2,999</small>
+                                <span>Elegant Large Couch</span>
+                              </h4>
+                              <p>Spacious luxury. Available in light and dark grey.</p>
+                              <button type="button" class="btn-grid-order" data-product="Elegant Large Couch" data-price="2999">Order Now</button>
+                            </figcaption>
+                          </figure>
+
+                          <!-- Item 4: Contemporary Accent Couch -->
+                          <figure class="col-6 my-gallery__item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="img/backgrounds/Green Accent Couch.jpeg" data-image="img/backgrounds/Green Accent Couch.jpeg" class="my-gallery__link" itemprop="contentUrl" data-size="588x266">
+                              <div class="picture" style="background-image: url('img/backgrounds/Green Accent Couch.jpeg');"></div>
+                              <img src="img/backgrounds/Green Accent Couch.jpeg" class="my-gallery__image" itemprop="thumbnail" alt="Contemporary Accent Couch" />
+                            </a>
+                            <figcaption class="my-gallery__description" itemprop="caption description">
+                              <h4 class="light">
+                                <small>$1,799</small>
+                                <span>Contemporary Accent Couch</span>
+                              </h4>
+                              <p>Statement piece. Available in grey, orange, and green.</p>
+                              <button type="button" class="btn-grid-order" data-product="Contemporary Accent Couch" data-price="1799">Order Now</button>
+                            </figcaption>
+                          </figure>
+
+                        </div>
+                      </div>
+
+                      <!-- Slide 2: 4 Products Grid -->
+                      <div class="swiper-slide">
+                        <div class="row my-gallery g-0 fullheight" itemscope itemtype="http://schema.org/ImageGallery">
+                          
+                          <!-- Item 5: Modern Patio Set -->
+                          <figure class="col-6 my-gallery__item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="img/backgrounds/New Patio Set Furnished.jpeg" data-image="img/backgrounds/New Patio Set Furnished.jpeg" class="my-gallery__link" itemprop="contentUrl" data-size="1280x853">
+                              <div class="picture" style="background-image: url('img/backgrounds/New Patio Set Furnished.jpeg');"></div>
+                              <img src="img/backgrounds/New Patio Set Furnished.jpeg" class="my-gallery__image" itemprop="thumbnail" alt="Modern Patio Set" />
+                            </a>
+                            <figcaption class="my-gallery__description" itemprop="caption description">
+                              <h4 class="light">
+                                <small><span class="sale-tag">SALE</span> $1,999</small>
+                                <span>Modern Patio Set</span>
+                              </h4>
+                              <p>Dine and relax in style with our elegant new patio set.</p>
+                              <button type="button" class="btn-grid-order" data-product="Modern Patio Set" data-price="1999">Order Now</button>
+                            </figcaption>
+                          </figure>
+
+                          <!-- Item 6: Classic Patio Set -->
+                          <figure class="col-6 my-gallery__item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="img/backgrounds/Old Patio Set.jpg" data-image="img/backgrounds/Old Patio Set.jpg" class="my-gallery__link" itemprop="contentUrl" data-size="1280x1066">
+                              <div class="picture" style="background-image: url('img/backgrounds/Old Patio Set.jpg');"></div>
+                              <img src="img/backgrounds/Old Patio Set.jpg" class="my-gallery__image" itemprop="thumbnail" alt="Classic Patio Set" />
+                            </a>
+                            <figcaption class="my-gallery__description" itemprop="caption description">
+                              <h4 class="light">
+                                <small>$2,399</small>
+                                <span>Classic Patio Set</span>
+                              </h4>
+                              <p>Our classic durable patio dining set, restocked.</p>
+                              <button type="button" class="btn-grid-order" data-product="Classic Patio Set" data-price="2399">Order Now</button>
+                            </figcaption>
+                          </figure>
+
+                          <!-- Item 7: Luxury Accent Chair (Red) -->
+                          <figure class="col-6 my-gallery__item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="img/backgrounds/Accent Chair Red.png" data-image="img/backgrounds/Accent Chair Red.png" class="my-gallery__link" itemprop="contentUrl" data-size="1122x1402">
+                              <div class="picture" style="background-image: url('img/backgrounds/Accent Chair Red.png');"></div>
+                              <img src="img/backgrounds/Accent Chair Red.png" class="my-gallery__image" itemprop="thumbnail" alt="Luxury Accent Chair (Ruby Red)" />
+                            </a>
+                            <figcaption class="my-gallery__description" itemprop="caption description">
+                              <h4 class="light">
+                                <small>$899</small>
+                                <span>Accent Chair (Ruby Red)</span>
+                              </h4>
+                              <p>Vibrant accent comfort for your sanctuary.</p>
+                              <button type="button" class="btn-grid-order" data-product="Luxury Accent Chair" data-price="899">Order Now</button>
+                            </figcaption>
+                          </figure>
+
+                          <!-- Item 8: Premium Lounge Chair (Khaki) -->
+                          <figure class="col-6 my-gallery__item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                            <a href="img/backgrounds/Lounge Chair Yellow.jpeg" data-image="img/backgrounds/Lounge Chair Yellow.jpeg" class="my-gallery__link" itemprop="contentUrl" data-size="853x1138">
+                              <div class="picture" style="background-image: url('img/backgrounds/Lounge Chair Yellow.jpeg');"></div>
+                              <img src="img/backgrounds/Lounge Chair Yellow.jpeg" class="my-gallery__image" itemprop="thumbnail" alt="Premium Lounge Chair (Khaki)" />
+                            </a>
+                            <figcaption class="my-gallery__description" itemprop="caption description">
+                              <h4 class="light">
+                                <small>$1,299</small>
+                                <span>Lounge Chair (Warm Khaki)</span>
+                              </h4>
+                              <p>Earth-tone modern relaxation.</p>
+                              <button type="button" class="btn-grid-order" data-product="Premium Lounge Chair" data-price="1299">Order Now</button>
+                            </figcaption>
+                          </figure>
+
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <!-- Navigation & Pagination Controls -->
+                    <div class="products-grid-controls">
+                      <div class="products-grid-prev"><i class="fa-solid fa-chevron-left"></i></div>
+                      <div class="swiper-pagination products-grid-pagination"></div>
+                      <div class="products-grid-next"><i class="fa-solid fa-chevron-right"></i></div>
+                    </div>
+
                   </div>
                 </div>
                 <!-- Works Gallery End -->
@@ -723,42 +831,133 @@
           <div class="product-selection-view">
             <div class="content-block">
               <div class="section-title">
-                <h2>Select Your <br><span>Product</span></h2>
-                <p class="section-title__text">Choose an item to proceed with your order.</p>
+                <h2>Select Your <br><span>Furniture</span></h2>
+                <p class="section-title__text">Choose one or multiple pieces and adjust quantities for your order.</p>
               </div>
-              <div class="row pt-4 product-grid">
+
+              <div class="row pt-3 product-grid g-4">
                 <!-- Product 1 -->
-                <div class="col-12 col-md-4 product-card sold-out-card" data-product="Single Boho Egg Basket" data-price="1999">
-                  <div class="product-card__image" style="background-image: url('img/backgrounds/Single Basket_White.jpg');">
-                    <div class="sold-out-tag">SOLD OUT</div>
-                  </div>
-                  <div class="product-card__info">
-                    <h4>Single Boho Egg Basket</h4>
-                    <p class="card-price">$1,999</p>
+                <div class="col-12 col-sm-6 col-lg-4 product-card-col">
+                  <div class="product-card" data-product="Luxury Accent Chair" data-price="899">
+                    <div class="product-card__image" style="background-image: url('img/backgrounds/Accent Chair White.png');">
+                      <div class="selected-badge is-hidden"><i class="fa-solid fa-check"></i> <span class="badge-qty">1</span></div>
+                    </div>
+                    <div class="product-card__info">
+                      <h4 class="card-title">Luxury Accent Chair</h4>
+                      <p class="card-price">$899</p>
+                      <div class="card-qty-control">
+                        <button type="button" class="btn-qty-minus" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button>
+                        <span class="card-qty-num">0</span>
+                        <button type="button" class="btn-qty-plus" aria-label="Increase quantity"><i class="fa-solid fa-plus"></i></button>
+                      </div>
+                    </div>
                   </div>
                 </div>
+
                 <!-- Product 2 -->
-                <div class="col-12 col-md-4 product-card sold-out-card" data-product="Double Boho Egg Basket" data-price="2499">
-                  <div class="product-card__image" style="background-image: url('img/backgrounds/Double Boho Egg Basket.png');">
-                    <div class="sold-out-tag">SOLD OUT</div>
-                  </div>
-                  <div class="product-card__info">
-                    <h4>Double Boho Egg Basket</h4>
-                    <p class="card-price">$2,499</p>
+                <div class="col-12 col-sm-6 col-lg-4 product-card-col">
+                  <div class="product-card" data-product="Premium Lounge Chair" data-price="1299">
+                    <div class="product-card__image" style="background-image: url('img/backgrounds/Lounge Chair Green.jpeg');">
+                      <div class="selected-badge is-hidden"><i class="fa-solid fa-check"></i> <span class="badge-qty">1</span></div>
+                    </div>
+                    <div class="product-card__info">
+                      <h4 class="card-title">Premium Lounge Chair</h4>
+                      <p class="card-price">$1,299</p>
+                      <div class="card-qty-control">
+                        <button type="button" class="btn-qty-minus" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button>
+                        <span class="card-qty-num">0</span>
+                        <button type="button" class="btn-qty-plus" aria-label="Increase quantity"><i class="fa-solid fa-plus"></i></button>
+                      </div>
+                    </div>
                   </div>
                 </div>
+
                 <!-- Product 3 -->
-                <div class="col-12 col-md-4 product-card" data-product="Patio Set" data-price="1000">
-                  <div class="product-card__image" style="background-image: url('img/backgrounds/Patio Set.jpg');">
-                    <div class="card-sale-tag">SALE</div>
+                <div class="col-12 col-sm-6 col-lg-4 product-card-col">
+                  <div class="product-card" data-product="Elegant Large Couch" data-price="2999">
+                    <div class="product-card__image" style="background-image: url('img/backgrounds/Large Couch Light Grey.jpeg');">
+                      <div class="selected-badge is-hidden"><i class="fa-solid fa-check"></i> <span class="badge-qty">1</span></div>
+                    </div>
+                    <div class="product-card__info">
+                      <h4 class="card-title">Elegant Large Couch</h4>
+                      <p class="card-price">$2,999</p>
+                      <div class="card-qty-control">
+                        <button type="button" class="btn-qty-minus" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button>
+                        <span class="card-qty-num">0</span>
+                        <button type="button" class="btn-qty-plus" aria-label="Increase quantity"><i class="fa-solid fa-plus"></i></button>
+                      </div>
+                    </div>
                   </div>
-                  <div class="product-card__info">
-                    <h4>Patio Set</h4>
-                    <p class="card-price"><span class="old-price">$2,399</span> $1,000</p>
-                    <span class="restock-tag">Restocking Soon</span>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-12 col-sm-6 col-lg-4 product-card-col">
+                  <div class="product-card" data-product="Contemporary Accent Couch" data-price="1799">
+                    <div class="product-card__image" style="background-image: url('img/backgrounds/Green Accent Couch.jpeg');">
+                      <div class="selected-badge is-hidden"><i class="fa-solid fa-check"></i> <span class="badge-qty">1</span></div>
+                    </div>
+                    <div class="product-card__info">
+                      <h4 class="card-title">Contemporary Accent Couch</h4>
+                      <p class="card-price">$1,799</p>
+                      <div class="card-qty-control">
+                        <button type="button" class="btn-qty-minus" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button>
+                        <span class="card-qty-num">0</span>
+                        <button type="button" class="btn-qty-plus" aria-label="Increase quantity"><i class="fa-solid fa-plus"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="col-12 col-sm-6 col-lg-4 product-card-col">
+                  <div class="product-card" data-product="Modern Patio Set" data-price="1999">
+                    <div class="product-card__image" style="background-image: url('img/backgrounds/New Patio Set Furnished.jpeg');">
+                      <div class="card-sale-tag">SALE</div>
+                      <div class="selected-badge is-hidden"><i class="fa-solid fa-check"></i> <span class="badge-qty">1</span></div>
+                    </div>
+                    <div class="product-card__info">
+                      <h4 class="card-title">Modern Patio Set</h4>
+                      <p class="card-price"><span class="old-price">$2,399</span> $1,999</p>
+                      <div class="card-qty-control">
+                        <button type="button" class="btn-qty-minus" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button>
+                        <span class="card-qty-num">0</span>
+                        <button type="button" class="btn-qty-plus" aria-label="Increase quantity"><i class="fa-solid fa-plus"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="col-12 col-sm-6 col-lg-4 product-card-col">
+                  <div class="product-card" data-product="Classic Patio Set" data-price="2399">
+                    <div class="product-card__image" style="background-image: url('img/backgrounds/Old Patio Set.jpg');">
+                      <div class="selected-badge is-hidden"><i class="fa-solid fa-check"></i> <span class="badge-qty">1</span></div>
+                    </div>
+                    <div class="product-card__info">
+                      <h4 class="card-title">Classic Patio Set</h4>
+                      <p class="card-price">$2,399</p>
+                      <div class="card-qty-control">
+                        <button type="button" class="btn-qty-minus" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button>
+                        <span class="card-qty-num">0</span>
+                        <button type="button" class="btn-qty-plus" aria-label="Increase quantity"><i class="fa-solid fa-plus"></i></button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
+
+              <!-- Selection Bottom Bar -->
+              <div class="selection-action-bar">
+                <div class="selection-summary-text">
+                  <span id="selection-items-count">0 items selected</span>
+                  <span class="summary-divider">•</span>
+                  <span id="selection-total-price" class="summary-total-gold">Total: $0</span>
+                </div>
+                <button type="button" id="btn-proceed-order" class="btn btn-dark" disabled>
+                  <span class="btn-caption">Proceed to Details &rarr;</span>
+                </button>
+              </div>
+
             </div>
           </div>
 
@@ -766,30 +965,40 @@
           <div class="order-form-view is-hidden">
             <div class="content-block">
               <div class="section-title">
-                <a href="#0" class="back-to-products"><i class="fa-solid fa-arrow-left"></i> Back to Products</a>
+                <a href="#0" class="back-to-products"><i class="fa-solid fa-arrow-left"></i> &nbsp;Modify Selected Items</a>
                 <h2>Complete Your <br><span>Order</span></h2>
-                <div class="selected-product-summary">
-                  <p>You are ordering: <strong id="selected-product-display"></strong></p>
-                  <p>Total: <strong id="selected-price-display"></strong></p>
+                <p class="section-title__text">Review your selected items and provide delivery details below.</p>
+              </div>
+
+              <!-- Order Breakdown Container -->
+              <div class="order-breakdown-card">
+                <div class="breakdown-header">
+                  <h5>Order Summary</h5>
+                </div>
+                <div id="order-items-list" class="order-items-list">
+                  <!-- Injected via custom.js -->
+                </div>
+                <div class="breakdown-footer">
+                  <span>Grand Total</span>
+                  <strong id="form-grand-total" class="grand-total-amount">$0</strong>
                 </div>
               </div>
 
               <!-- Order Form Start -->
               <form id="order-form" class="form order-form">
-                <!-- Hidden fields for product selection -->
-                <input type="hidden" id="form-product-name" name="product_name">
-                <input type="hidden" id="form-product-price" name="price">
-                
                 <div class="container-fluid p-0">
                   <div class="row gx-4">
                     <div class="col-12 col-md-6">
-                      <input type="text" name="name" placeholder="Your Name*" required>
+                      <label class="input-label">Full Name*</label>
+                      <input type="text" name="name" placeholder="e.g. Sarah Jenkins" required>
                     </div>
                     <div class="col-12 col-md-6">
-                      <input type="text" name="contact" placeholder="Contact Number*" required>
+                      <label class="input-label">Contact / Phone Number*</label>
+                      <input type="tel" name="contact" placeholder="e.g. +1 (876) 555-0199" required>
                     </div>
                     <div class="col-12">
-                      <input type="text" name="location" placeholder="Location*" required>
+                      <label class="input-label">Delivery Location / Address*</label>
+                      <input type="text" name="location" placeholder="e.g. 14 Hope Road, Kingston 6" required>
                     </div>
                     <div class="col-12">
                       <div class="payment-method-selector">
@@ -809,8 +1018,12 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <button type="submit" class="btn btn-dark">
-                        <span class="btn-caption">Order Now</span>
+                      <label class="input-label">Special Delivery Instructions / Notes (Optional)</label>
+                      <textarea name="notes" placeholder="Any specific instructions, delivery gate codes, or preferred delivery timing..." style="height: 90px;"></textarea>
+                    </div>
+                    <div class="col-12 pt-3">
+                      <button type="submit" class="btn btn-dark w-100">
+                        <span class="btn-caption" id="btn-submit-order-text">Confirm & Place Order</span>
                       </button>
                     </div>
                   </div>
@@ -896,7 +1109,7 @@
     <!-- Load Scripts Start -->
     <script src="js/libs.min.js"></script>
     <script src="js/gallery-init.js"></script>
-    <script src="js/custom.js?v=1.2"></script>
+    <script src="js/custom.js?v=2.2"></script>
     <script src="js/maps/map.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkwy-f9lOMLZ1Fryk6S2hKgid_AJ6WlT8"></script>
     <!-- Load Scripts End -->
