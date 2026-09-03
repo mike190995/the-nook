@@ -2937,10 +2937,10 @@ form .inputs-description {
 }
 
 .card-price {
-  font-family: "Palm Tango", sans-serif;
-  font-size: 1.7rem;
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 1.6rem;
   color: #CBA133 !important;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1.2rem;
 }
 
@@ -3026,7 +3026,7 @@ form .inputs-description {
   color: #CBA133;
   font-weight: 700;
   font-size: 1.8rem;
-  font-family: "Palm Tango", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
 }
 
 .selection-action-bar .btn {
@@ -3101,9 +3101,9 @@ form .inputs-description {
 }
 
 .order-item-row .item-total {
-  font-weight: 600;
+  font-weight: 700;
   color: #064422;
-  font-family: "Palm Tango", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
   font-size: 1.5rem;
 }
 
@@ -3120,9 +3120,10 @@ form .inputs-description {
 }
 
 .grand-total-amount {
-  font-family: "Palm Tango", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
   font-size: 2.2rem;
   color: #CBA133;
+  font-weight: 700;
 }
 
 .input-label {
