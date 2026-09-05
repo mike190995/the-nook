@@ -483,11 +483,6 @@ $(function() {
 
     var orderId = "NOOK-" + Math.floor(100000 + Math.random() * 900000);
     
-    // Format selected items into a clean flat summary string
-    var itemsSummary = selectedItems.map(function(item) {
-      return item.quantity + "x " + item.product_name + " ($" + item.unit_price.toLocaleString() + " ea)";
-    }).join(", ");
-
     var payload = {
       order_id: orderId,
       timestamp: new Date().toLocaleString(),
@@ -496,7 +491,7 @@ $(function() {
       location: th.find('input[name="location"]').val(),
       payment_method: th.find('input[name="payment_method"]:checked').val() || "Bank Transfer",
       notes: th.find('textarea[name="notes"]').val() || "",
-      items: itemsSummary,
+      items: selectedItems,
       total_qty: totalQty,
       total_amount: totalAmount
     };
