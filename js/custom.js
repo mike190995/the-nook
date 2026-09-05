@@ -458,11 +458,13 @@ $(function() {
     // Prepare items array
     var selectedItems = [];
     var totalAmount = 0;
+    var totalQty = 0;
     Object.keys(orderCart).forEach(function(name) {
       var item = orderCart[name];
       if (item.qty > 0) {
         var lineTotal = item.qty * item.price;
         totalAmount += lineTotal;
+        totalQty += item.qty;
         selectedItems.push({
           product_name: name,
           quantity: item.qty,
@@ -480,16 +482,23 @@ $(function() {
     }
 
     var orderId = "NOOK-" + Math.floor(100000 + Math.random() * 900000);
+    
+    // Format selected items into a clean flat summary string
+    var itemsSummary = selectedItems.map(function(item) {
+      return item.quantity + "x " + item.product_name + " ($" + item.unit_price.toLocaleString() + " ea)";
+    }).join(", ");
+
     var payload = {
       order_id: orderId,
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toLocaleString(),
       name: th.find('input[name="name"]').val(),
       contact: th.find('input[name="contact"]').val(),
       location: th.find('input[name="location"]').val(),
       payment_method: th.find('input[name="payment_method"]:checked').val() || "Bank Transfer",
       notes: th.find('textarea[name="notes"]').val() || "",
-      total_amount: totalAmount,
-      items: selectedItems
+      items: itemsSummary,
+      total_qty: totalQty,
+      total_amount: totalAmount
     };
 
     // Disable button during submission
