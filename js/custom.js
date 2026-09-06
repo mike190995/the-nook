@@ -501,7 +501,7 @@ $(function() {
     submitBtn.find('.btn-caption').text("Submitting Order...");
 
     // Google Apps Script URL
-    var scriptURL = "https://script.google.com/macros/s/AKfycbzTeRtxzO0t-2qn7HpZKsWS-bMq2vqCXGaSHgrXHbvUG4FxJHRoifALA5j4rpDY5KaUjQ/exec";
+    var scriptURL = "https://script.google.com/macros/s/AKfycbztVRD6QvYK52g0RCuKuMhK33158nOJGmB3ZavVERc4dj2ExKM-WKDsXmMrA6v266rZUg/exec";
 
     fetch(scriptURL, {
       method: 'POST',
